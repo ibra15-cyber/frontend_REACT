@@ -20,7 +20,7 @@ function App() {
       },
       { 
         id: "2",
-        name: "Toure",
+        name:"Toure",
         title:'Flutter dev', //passing a variable of type faker 
         avatar: "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/526.jpg",
       },
@@ -34,20 +34,6 @@ function App() {
 
   //arrow fns
   const toggleShowCard = () => setShowCard(!showCard)
-
-  const changeNameHandler  = (item, id)=> {
-    //get index any item in the card
-    //ie for each cardItem in card return those where cardItem.id == id ie true
-    //save them as cardIndex
-    const cardIndex = cards.findIndex(cardItem => cardItem.id == id) //true or false
-
-    //make copy of the card
-    const cards_copy = [...cards]
-    //for all the items where id's are same
-    //change the name prop to the value bein passed int input
-    cards_copy[cardIndex].name=item.target.value
-    setCards(cards_copy)
-  }
 
   const deleteCardHandler = (cardIndex) => {
     const cards_copy = [...cards]
@@ -63,7 +49,6 @@ function App() {
           title={card.title} 
           avatar={card.avatar}
           onDelete={() => deleteCardHandler(card)}
-          onChangeName={(cardItem) => changeNameHandler(cardItem, card.id)}
       />
     )  
   ) 
@@ -97,10 +82,3 @@ export default App;
 //then we make a slice that takes out the particular item index to the 1 ie the next
 //then we return the rest of the card 
 //note splice makes new copy
-
-//we created an input its value is the value of the props.name
-//we passed a fn to onChange
-//we call the fn name in our card and passed it a fn we created
-//he also makes copies of the original list for safety but we can do otherwise
-//also they are all able to see cards bc its a constant in the useState
-//again name is the default, setState is what it should chang to

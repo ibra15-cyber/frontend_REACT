@@ -46,9 +46,7 @@ function App() {
         name={`${faker.name.firstName()} ${faker.name.lastName()}`}
         title={faker.name.jobTitle()}
         avatar={faker.image.avatar()}
-      > {buttons}
-        
-        </Card>
+      > {buttons}</Card>
 
         
     </div>

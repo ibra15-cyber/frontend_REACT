@@ -7,8 +7,10 @@ export const Card = (props) => {
             <img src={props.avatar} alt="Avatar" style={{width:'40%'}} />
             <div class="container">
                 <h4><b>{props.name}</b></h4> 
+                <input type='text' value={props.name} onChange={props.onChangeName}/>
                 <p>{props.title}</p> 
-                <p>{props.children}</p>
+                <p><button className='button-red' onClick={props.onDelete}>Delete</button></p>
+                <div>{props.children}</div>
             </div>
         </div>
     )
