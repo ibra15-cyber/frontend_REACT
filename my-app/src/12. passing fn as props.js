@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
 
-      <button className='button4' onClick={() => changeNameHandler("John Doe")}>Change name</button>
+      <button className='button' onClick={() => changeNameHandler("John Doe")}>Change name</button>
       
       <Card 
         name={name} //passing a variable to a props.name

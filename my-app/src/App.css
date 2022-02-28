@@ -44,6 +44,15 @@
 } /* Blue */
 .button-red {
 	background-color: #f44336;
+  /* background-color: #4caf50; */
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2x;
+  cursor: pointer;
 } /* Red */
 .button4{
   background-color: green;
@@ -58,4 +67,56 @@
   width: 40%;
   margin-top: 20px;
   margin: 0 auto 10px;
+}
+
+
+
+.button {
+  background-color: #4caf50;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2x;
+  cursor: pointer;
+  color: white;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  margin-top: 20px;
+  margin: 0 auto 10px;
+  /* background-color: #4caf50; */
+  border: none;
+  padding:32px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  margin: 4px 2x;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+
+.pink {
+  background-color: pink;
+}
+.text {
+  font-weight: bold;
+  color: black;
+}
+.red {
+  background-color: red;
 }

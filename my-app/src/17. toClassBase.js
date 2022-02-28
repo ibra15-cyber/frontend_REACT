@@ -87,9 +87,7 @@ class App extends Component {
 
   
   render() {
-    if (this.state.cards===false){
-      return <div>nothing</div>
-    }
+
     const classes = ['button']
     if (this.state.cards.length < 3) classes.push('pink') //classes = button4 pink ie render the button4 then pin
     if (this.state.cards.length < 2) classes.push('text red') //classes = button4 red text ie green red also the text

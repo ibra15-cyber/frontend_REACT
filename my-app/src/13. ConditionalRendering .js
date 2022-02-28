@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
 
-      <button className='button4' onClick= {toggleShowCard}>Toggle show/hide</button>
+      <button className='button' onClick= {toggleShowCard}>Toggle show/hide</button>
       {showCard ?
       <Card 
         name={name} //passing a variable to a props.name

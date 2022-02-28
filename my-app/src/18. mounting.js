@@ -19,6 +19,7 @@ class App extends Component {
   //we passed the variables that would have been declared using useState with initial value in and fn to change the state
   //so both items inside the state of the component extended here have state characteristics
   constructor(props){
+    console.log("App js constructor")
     super(props)
     this.state={
       cards: [
@@ -45,12 +46,16 @@ class App extends Component {
     }
   }
 
+  static getDerivedStateFromProps(props, state){
+    console.log("getDrivedStateFromProps", props)
+    return state
+  }
+
   //arrow fns
   // const toggleShowCard = () => setShowCard(!showCard)
   // remember setShowCard a fn incharge of changing the state of showCard
   //destructure showCard and use the exact opposite when toggleshowCard fn is called
   toggleShowCard = () => this.state({showCard:!this.state.showCard})
-
 
   // const changeNameHandler  = (item, id)=> {
   changeNameHandler  = (item, id)=> {
@@ -84,12 +89,13 @@ class App extends Component {
     this.setState({cards:cards_copy})
   }
 
+  componentDidMount(){
+    console.log("App js componnet did mount")
+  }
 
-  
   render() {
-    if (this.state.cards===false){
-      return <div>nothing</div>
-    }
+  
+    console.log("app js render")
     const classes = ['button']
     if (this.state.cards.length < 3) classes.push('pink') //classes = button4 pink ie render the button4 then pin
     if (this.state.cards.length < 2) classes.push('text red') //classes = button4 red text ie green red also the text
